@@ -1,7 +1,7 @@
 (ns sueca.deck)
 
 (def ranks
-  [:ace :two :three :four :five :six :seven :queen :jack :king])
+  [:two :three :four :five :six :seven :queen :jack :king :ace])
 
 (def suits
   [:spades :clubs :hearts :diamonds])
