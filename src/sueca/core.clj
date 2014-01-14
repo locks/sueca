@@ -5,6 +5,11 @@
   [players]
   (first players))
 
+(defn deal-cards
+  "Deals cards to playrs"
+  [shuffled-deck number-of-players]
+  (partition (/ (count shuffled-deck) number-of-players) shuffled-deck))
+
 (defn setup-table
   "Setups up the playing table. This involves dealing cards to the players."
   [shuffled-deck]
@@ -12,10 +17,6 @@
    :trump (peek shuffled-deck)
    :players (deal-cards (reverse shuffled-deck) 4)})
 
-(defn deal-cards
-  "Deals cards to playrs"
-  [shuffled-deck number-of-players]
-  (partition (/ (count shuffled-deck) number-of-players) shuffled-deck))
 
 (setup-table play-deck)
 
