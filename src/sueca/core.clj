@@ -8,8 +8,8 @@
 (defn setup-table
   "Setups up the playing table. This involves dealing cards to the players."
   [shuffled-deck]
-   :trunfo (peek shuffled-deck)
   {:tricks []
+   :trump (peek shuffled-deck)
    :players (deal-cards (reverse shuffled-deck) 4)})
 
 (defn deal-cards
