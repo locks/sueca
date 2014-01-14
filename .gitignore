@@ -8,3 +8,6 @@ pom.xml
 # nrepl
 .nrepl-port
 target
+
+# lein
+.lein*
