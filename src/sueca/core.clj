@@ -18,6 +18,12 @@
    :trump (peek shuffled-deck)
    :players (deal-cards (reverse shuffled-deck) 4)})
 
+(defn add-points
+  [{:keys [trump score] :as table}]
+  (let [points (deck/calculate-points (get table :table))
+        winner (:player (first (deck/highest-card (get table :table) trump)))]
+    (assoc-in table [:score] (score/add-score score points winner))))
+
+
 
 (setup-table play-deck)
-
