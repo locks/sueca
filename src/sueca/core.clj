@@ -1,5 +1,6 @@
 (ns sueca.core
-  (:require [sueca.deck]))
+  (:require [sueca.deck :as deck]
+            [sueca.score :as score]))
 
 (defn first-player
   [players]
