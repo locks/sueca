@@ -14,9 +14,11 @@
 (defn setup-table
   "Setups up the playing table. This involves dealing cards to the players."
   [shuffled-deck]
-  {:tricks []
-   :trump (peek shuffled-deck)
-   :players (deal-cards (reverse shuffled-deck) 4)})
+  {:tricks   []
+   :trump   (peek shuffled-deck)
+   :players (deal-cards (reverse shuffled-deck) 4)
+   :score   [0 0]
+   :table   ()})
 
 (defn add-points
   [{:keys [trump score] :as table}]
