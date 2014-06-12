@@ -1,4 +1,4 @@
-(defproject sueca "0.1.0-SNAPSHOT"
+(defproject org.clojars.locks/sueca "0.1.0-SNAPSHOT"
   :description "A library that implements the Sueca game logic"
   :url "http://github.com/locks/sueca"
   :license {:name "Eclipse Public License"
