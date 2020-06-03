@@ -26,6 +26,19 @@
         winner (:player (first (deck/highest-card (get table :table) trump)))]
     (assoc-in table [:score] (score/add-score score points winner))))
 
+(defn play-trick
+  [{:keys [tricks trump players table] :as original-table}]
+  (-> original-table
+      add-points))
+
+(play-trick sample-table)
+
+(defn start-game
+  "Starts a game."
+  []
+  (let [deck  (shuffle sueca.deck/full)
+        board (setup-table deck)]
+    board))
 
 
-(setup-table play-deck)
+(start-game)

@@ -1,7 +1,6 @@
 (ns sueca.score)
 
-(defn- team-index
-  [player-index]
+(defn- team-index [player-index]
   (mod player-index 2))
 
 (defn add-score

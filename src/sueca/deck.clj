@@ -36,3 +36,9 @@
   "Returns highest card from a collection, including trumps"
   [cards trump]
   (sort-by #(sort-value %1 trump) cards))
+
+(highest-card [{:rank :king :suit :clubs :player 0}
+               {:rank :three :suit :spades :player 2}
+               {:rank :two :suit :spades :player 1}
+               {:rank :ace :suit :clubs :player 3}]
+              :spades)
